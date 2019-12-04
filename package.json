@@ -1,6 +1,6 @@
 {
     "name": "andexds-brain-games",
-    "version": "0.1.0",
+    "version": "0.2.2",
     "description": "Student project at hexlet.io",
     "main": "src/bin/brain-games.js",
     "scripts": {
@@ -24,7 +24,8 @@
         "@babel/cli": "^7.7.4",
         "@babel/core": "^7.7.4",
         "@babel/node": "^7.7.4",
-        "@babel/preset-env": "^7.7.4"
+        "@babel/preset-env": "^7.7.4",
+        "readline-sync": "^1.4.10"
     },
     "bin": {
         "brain-games": "dist/bin/brain-games.js"
