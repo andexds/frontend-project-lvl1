@@ -1,6 +1,6 @@
 {
     "name": "andexds-brain-games",
-    "version": "0.3.2",
+    "version": "0.4.2",
     "description": "Student project at hexlet.io",
     "main": "src/bin/brain-games.js",
     "scripts": {
@@ -33,6 +33,7 @@
         "readline-sync": "^1.4.10"
     },
     "bin": {
-        "brain-games": "dist/bin/brain-games.js"
+        "brain-games": "dist/bin/brain-games.js",
+        "brain-even": "dist/bin/brain-even.js"
     }
 }

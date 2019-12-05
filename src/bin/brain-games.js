@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import askName from '..';
+import { askName } from '..';
 
 const name = askName();
 console.log(`Hello, ${name}`);
