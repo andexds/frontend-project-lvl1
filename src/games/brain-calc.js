@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable default-case */
 import readlineSync from 'readline-sync';
 
