@@ -4,3 +4,6 @@ This is student project at hexlet.io
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f9b013cdc3a386b28ce9/maintainability)](https://codeclimate.com/github/andexds/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.com/andexds/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/andexds/frontend-project-lvl1)
+
+
+[![asciicast](https://asciinema.org/a/mPQWvbSsotfncT8vJkf4ifdI2.svg)](https://asciinema.org/a/mPQWvbSsotfncT8vJkf4ifdI2)
