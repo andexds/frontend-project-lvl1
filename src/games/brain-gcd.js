@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  makeRandomPair, getX, getY, sum, mult, minus,
+  makeRandomPair, getX, getY,
 } from '../helpers/pair';
 import randomNumber from '../helpers/random';
 
