@@ -13,3 +13,6 @@ This is student project at hexlet.io
 
 **Play Brain GCD**
 [![asciicast](https://asciinema.org/a/IGiB6KHmMFxEiguqR7x1B0p1Q.svg)](https://asciinema.org/a/IGiB6KHmMFxEiguqR7x1B0p1Q)
+
+**Play Brain Progression**
+[![asciicast](https://asciinema.org/a/D1Ue6qsy5yf20hMtNyg3llKDT.svg)](https://asciinema.org/a/D1Ue6qsy5yf20hMtNyg3llKDT)
