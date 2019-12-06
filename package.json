@@ -1,6 +1,6 @@
 {
     "name": "andexds-brain-games",
-    "version": "0.6.3",
+    "version": "0.7.3",
     "description": "Student project at hexlet.io",
     "main": "src/bin/brain-games.js",
     "scripts": {
@@ -37,6 +37,7 @@
         "brain-even": "dist/bin/brain-even.js",
         "brain-calc": "dist/bin/brain-calc.js",
         "brain-gcd": "dist/bin/brain-gcd.js",
-        "brain-progression": "dist/bin/brain-progression.js"
+        "brain-progression": "dist/bin/brain-progression.js",
+        "brain-prime": "dist/bin/brain-prime.js"
     }
 }
