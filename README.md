@@ -10,3 +10,6 @@ This is student project at hexlet.io
 
 **Play Brain Calc**
 [![asciicast](https://asciinema.org/a/aN9oE07zoZaRH8B4uHaWNYKWB.svg)](https://asciinema.org/a/aN9oE07zoZaRH8B4uHaWNYKWB)
+
+**Play Brain GCD**
+[![asciicast](https://asciinema.org/a/IGiB6KHmMFxEiguqR7x1B0p1Q.svg)](https://asciinema.org/a/IGiB6KHmMFxEiguqR7x1B0p1Q)

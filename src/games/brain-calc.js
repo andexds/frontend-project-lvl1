@@ -1,10 +1,10 @@
-/* eslint-disable max-len */
-/* eslint-disable default-case */
 import readlineSync from 'readline-sync';
-import { makeRandomPair, getX, getY, sum, mult, minus } from '../helpers/pair';
+import {
+  makeRandomPair, getX, getY, sum, mult, minus,
+} from '../helpers/pair';
 import randomNumber from '../helpers/random';
 
-const wellcomeMessage = () => {
+const welcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('What is the result of the expression?');
 };
@@ -38,5 +38,5 @@ const brainCalc = () => {
   return false;
 };
 
-export { wellcomeMessage };
+export { welcomeMessage };
 export default brainCalc;

@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import randomNumber from '../helpers/random';
 
-const wellcomeMessage = () => {
+const welcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
@@ -20,5 +20,5 @@ const brainEven = () => {
   return false;
 };
 
-export { wellcomeMessage };
+export { welcomeMessage };
 export default brainEven;
