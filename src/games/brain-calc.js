@@ -1,28 +1,13 @@
 /* eslint-disable max-len */
 /* eslint-disable default-case */
 import readlineSync from 'readline-sync';
+import { makeRandomPair, getX, getY, sum, mult, minus } from '../helpers/pair';
+import randomNumber from '../helpers/random';
 
 const wellcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('What is the result of the expression?');
 };
-
-const makeRandomPair = (x = Math.round(Math.random() * 10), y = Math.round(Math.random() * 10)) => (selector) => {
-  switch (selector) {
-    case 'first':
-      return x;
-    case 'second':
-      return y;
-  }
-};
-
-const getX = (pair) => pair('first');
-const getY = (pair) => pair('second');
-
-const sum = (pair) => String(getX(pair) + getY(pair));
-const mult = (pair) => String(getX(pair) * getY(pair));
-const minus = (pair) => String(getX(pair) - getY(pair));
-const answerToString = (pair, sing) => `${getX(pair)} ${sing} ${getY(pair)}`;
 
 const getAnswer = (pair, sing) => {
   switch (sing) {
@@ -32,16 +17,17 @@ const getAnswer = (pair, sing) => {
       return minus(pair);
     case '*':
       return mult(pair);
+    default: return false;
   }
 };
 
 const brainCalc = () => {
   const randomPair = makeRandomPair();
 
-  const randomSing = ['+', '-', '*'][Math.round(Math.random() * 2)];
+  const randomSing = ['+', '-', '*'][randomNumber(2)];
   const result = getAnswer(randomPair, randomSing);
 
-  console.log(`Question: ${answerToString(randomPair, randomSing)}`);
+  console.log(`Question: ${getX(randomPair)} ${randomSing} ${getY(randomPair)}`);
 
   const answer = readlineSync.question('Your answer: ');
   if (answer === result) {

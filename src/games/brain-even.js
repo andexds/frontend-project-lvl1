@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import randomNumber from '../helpers/random';
 
 const wellcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
@@ -6,7 +7,7 @@ const wellcomeMessage = () => {
 };
 
 const brainEven = () => {
-  const currentNumber = Math.round(Math.random() * 10);
+  const currentNumber = randomNumber(10);
   console.log(`Question: ${currentNumber}`);
   const correctAnswer = (currentNumber % 2 === 0) && currentNumber > 0 ? 'yes' : 'no';
 

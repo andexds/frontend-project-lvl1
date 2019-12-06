@@ -1,6 +1,6 @@
 {
     "name": "andexds-brain-games",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "description": "Student project at hexlet.io",
     "main": "src/bin/brain-games.js",
     "scripts": {

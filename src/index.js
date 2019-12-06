@@ -1,9 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const askName = () => readlineSync.question('What is your name?\n');
-
 const startGame = (game) => {
-  const name = askName();
+  const name = readlineSync.question('What is your name?\n');
   console.log(`Hello, ${name}`);
   let rightAnswer = 0;
 
@@ -18,4 +16,4 @@ const startGame = (game) => {
   console.log(`\nCongratulations, ${name}\n`);
 };
 
-export { askName, startGame };
+export default startGame;
