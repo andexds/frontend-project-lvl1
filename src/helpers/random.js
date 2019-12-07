@@ -1,2 +1,2 @@
-const randomNumber = (x) => Math.round(Math.random() * x);
-export default randomNumber;
+const getRandomNumber = (x) => Math.round(Math.random() * x);
+export default getRandomNumber;

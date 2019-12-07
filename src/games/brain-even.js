@@ -1,15 +1,16 @@
 import readlineSync from 'readline-sync';
-import randomNumber from '../helpers/random';
+import getRandomNumber from '../helpers/random';
+import startGame from '..';
 
-const welcomeMessage = () => {
+const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
 
-const brainEven = () => {
-  const currentNumber = randomNumber(10);
+const gemaBrainEven = () => {
+  const currentNumber = getRandomNumber(10);
   console.log(`Question: ${currentNumber}`);
-  const correctAnswer = (currentNumber % 2 === 0) && currentNumber > 0 ? 'yes' : 'no';
+  const correctAnswer = currentNumber % 2 === 0 ? 'yes' : 'no';
 
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {
@@ -20,5 +21,4 @@ const brainEven = () => {
   return false;
 };
 
-export { welcomeMessage };
-export default brainEven;
+export default () => startGame(showWelcomeMessage, gemaBrainEven);

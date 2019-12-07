@@ -2,9 +2,10 @@ import readlineSync from 'readline-sync';
 import {
   makeRandomPair, getX, getY, sum, mult, minus,
 } from '../helpers/pair';
-import randomNumber from '../helpers/random';
+import getRandomNumber from '../helpers/random';
+import startGame from '..';
 
-const welcomeMessage = () => {
+const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('What is the result of the expression?');
 };
@@ -21,22 +22,21 @@ const getAnswer = (pair, sing) => {
   }
 };
 
-const brainCalc = () => {
+const gameBrainCalc = () => {
   const randomPair = makeRandomPair();
 
-  const randomSing = ['+', '-', '*'][randomNumber(2)];
-  const result = getAnswer(randomPair, randomSing);
+  const randomSing = ['+', '-', '*'][getRandomNumber(2)];
+  const correctAnswer = getAnswer(randomPair, randomSing);
 
   console.log(`Question: ${getX(randomPair)} ${randomSing} ${getY(randomPair)}`);
 
   const answer = readlineSync.question('Your answer: ');
-  if (answer === result) {
+  if (answer === correctAnswer) {
     console.log('\nCorrect!\n');
     return true;
   }
-  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was ${result}.\n`);
+  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}.\n`);
   return false;
 };
 
-export { welcomeMessage };
-export default brainCalc;
+export default () => startGame(showWelcomeMessage, gameBrainCalc);

@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const startGame = (game) => {
+const startGame = (showWelcomeMessage, game) => {
+  showWelcomeMessage();
   const name = readlineSync.question('What is your name?\n');
   console.log(`Hello, ${name}`);
   let rightAnswer = 0;

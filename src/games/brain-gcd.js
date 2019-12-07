@@ -2,9 +2,10 @@ import readlineSync from 'readline-sync';
 import {
   makeRandomPair, getX, getY,
 } from '../helpers/pair';
-import randomNumber from '../helpers/random';
+import getRandomNumber from '../helpers/random';
+import startGame from '..';
 
-const welcomeMessage = () => {
+const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Find the greatest common divisor of given numbers.');
 };
@@ -24,20 +25,19 @@ const getNOD = (pair) => {
   return String(x + y);
 };
 
-const brainGcd = () => {
-  const randomPair = makeRandomPair(randomNumber(100) + 1, randomNumber(100) + 1);
-  const nod = getNOD(randomPair);
+const gameBrainGcd = () => {
+  const randomPair = makeRandomPair(getRandomNumber(100) + 1, getRandomNumber(100) + 1);
+  const correctAnswer = getNOD(randomPair);
 
   console.log(`Question: ${getX(randomPair)} ${getY(randomPair)}`);
   const answer = readlineSync.question('Your answer: ');
 
-  if (answer === nod) {
+  if (answer === correctAnswer) {
     console.log('\nCorrect!\n');
     return true;
   }
-  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was ${nod}.\n`);
+  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}.\n`);
   return false;
 };
 
-export { welcomeMessage };
-export default brainGcd;
+export default () => startGame(showWelcomeMessage, gameBrainGcd);

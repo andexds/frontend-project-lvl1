@@ -1,16 +1,18 @@
 import readlineSync from 'readline-sync';
-import randomNumber from '../helpers/random';
+import getRandomNumber from '../helpers/random';
+import startGame from '..';
 
-const welcomeMessage = () => {
+const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('What number is missing in the progression?');
 };
 
-const brainProgression = () => {
-  const start = randomNumber(10);
-  const step = randomNumber(9) + 1;
-  const positionOfEmpty = randomNumber(9);
+const gameBrainProgression = () => {
+  const start = getRandomNumber(10);
+  const step = getRandomNumber(9) + 1;
+  const positionOfEmpty = getRandomNumber(9);
   let progression = '';
+  const correctAnswer = String(start + step * positionOfEmpty);
 
   for (let i = 0; i < 10; i += 1) {
     if (i !== positionOfEmpty) {
@@ -22,13 +24,12 @@ const brainProgression = () => {
   console.log(`Question: ${progression}`);
   const answer = readlineSync.question('Your answer: ');
 
-  if (answer === String(start + step * positionOfEmpty)) {
+  if (answer === correctAnswer) {
     console.log('\nCorrect!\n');
     return true;
   }
-  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was ${start + step * positionOfEmpty}.\n`);
+  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`);
   return false;
 };
 
-export { welcomeMessage };
-export default brainProgression;
+export default () => startGame(showWelcomeMessage, gameBrainProgression);

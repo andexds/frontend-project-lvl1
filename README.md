@@ -14,7 +14,7 @@
 
 ### Проверка на четность
 Запуск игры `$ brain-even`
-[![asciicast]https://asciinema.org/a/MYqpOgSlCyhkEPDmqlKQolpRQ.svg)](https://asciinema.org/a/MYqpOgSlCyhkEPDmqlKQolpRQ)
+[![asciicast](https://asciinema.org/a/MYqpOgSlCyhkEPDmqlKQolpRQ.svg)](https://asciinema.org/a/MYqpOgSlCyhkEPDmqlKQolpRQ)
 
 ### Калькулятор
 Запуск игры `$ brain-calc`

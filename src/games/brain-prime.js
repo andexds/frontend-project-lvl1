@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
-import randomNumber from '../helpers/random';
+import getRandomNumber from '../helpers/random';
+import startGame from '..';
 
-const welcomeMessage = () => {
+const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 };
@@ -13,20 +14,19 @@ const isPrime = (n) => {
   return true;
 };
 
-const brainPrime = () => {
-  const number = randomNumber(4000) + 2;
-  const rightAnswer = isPrime(number) ? 'yes' : 'no';
+const gameBrainPrime = () => {
+  const number = getRandomNumber(4000) + 2;
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   console.log(`Question: ${number}`);
   const answer = readlineSync.question('Your answer: ');
 
-  if (rightAnswer === answer) {
+  if (correctAnswer === answer) {
     console.log('\nCorrect!\n');
     return true;
   }
-  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\n`);
+  console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`);
   return false;
 };
 
-export { welcomeMessage };
-export default brainPrime;
+export default () => startGame(showWelcomeMessage, gameBrainPrime);
