@@ -8,7 +8,7 @@ const showWelcomeMessage = () => {
 };
 
 const gemaBrainEven = () => {
-  const currentNumber = getRandomNumber(10);
+  const currentNumber = getRandomNumber(0, 100);
   console.log(`Question: ${currentNumber}`);
   const correctAnswer = currentNumber % 2 === 0 ? 'yes' : 'no';
 

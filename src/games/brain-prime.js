@@ -15,7 +15,7 @@ const isPrime = (n) => {
 };
 
 const gameBrainPrime = () => {
-  const number = getRandomNumber(4000) + 2;
+  const number = getRandomNumber(2, 4000);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   console.log(`Question: ${number}`);

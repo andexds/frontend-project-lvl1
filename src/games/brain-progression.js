@@ -8,9 +8,9 @@ const showWelcomeMessage = () => {
 };
 
 const gameBrainProgression = () => {
-  const start = getRandomNumber(10);
-  const step = getRandomNumber(9) + 1;
-  const positionOfEmpty = getRandomNumber(9);
+  const start = getRandomNumber(0, 10);
+  const step = getRandomNumber(1, 10);
+  const positionOfEmpty = getRandomNumber(0, 9);
   let progression = '';
   const correctAnswer = String(start + step * positionOfEmpty);
 

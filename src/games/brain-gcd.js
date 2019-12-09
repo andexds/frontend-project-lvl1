@@ -26,7 +26,7 @@ const getNOD = (pair) => {
 };
 
 const gameBrainGcd = () => {
-  const randomPair = makeRandomPair(getRandomNumber(100) + 1, getRandomNumber(100) + 1);
+  const randomPair = makeRandomPair(getRandomNumber(1, 100), getRandomNumber(1, 100));
   const correctAnswer = getNOD(randomPair);
 
   console.log(`Question: ${getX(randomPair)} ${getY(randomPair)}`);

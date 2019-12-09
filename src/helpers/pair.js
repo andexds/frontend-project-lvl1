@@ -1,6 +1,6 @@
-import randomNumber from './random';
+import getRandomNumber from './random';
 
-const makeRandomPair = (x = randomNumber(10), y = randomNumber(10)) => (selector) => {
+const makeRandomPair = (x = getRandomNumber(0, 10), y = getRandomNumber(0, 10)) => (selector) => {
   switch (selector) {
     case 'first':
       return x;

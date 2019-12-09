@@ -25,7 +25,7 @@ const getAnswer = (pair, sing) => {
 const gameBrainCalc = () => {
   const randomPair = makeRandomPair();
 
-  const randomSing = ['+', '-', '*'][getRandomNumber(2)];
+  const randomSing = ['+', '-', '*'][getRandomNumber(0, 2)];
   const correctAnswer = getAnswer(randomPair, randomSing);
 
   console.log(`Question: ${getX(randomPair)} ${randomSing} ${getY(randomPair)}`);
