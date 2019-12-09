@@ -6,11 +6,12 @@ const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
+const isEven = (number) => number % 2 === 0;
 
 const gemaBrainEven = () => {
   const currentNumber = getRandomNumber(0, 100);
   console.log(`Question: ${currentNumber}`);
-  const correctAnswer = currentNumber % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = isEven(currentNumber) ? 'yes' : 'no';
 
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {
