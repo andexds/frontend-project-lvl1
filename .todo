@@ -5,9 +5,9 @@ TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfb
 
 TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/games/brain-even.js#L13 выделите код проверки на чётность числа в отдельную абстракцию - это классическая функция-предикат.
 
-TODO: https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/games/brain-progression.js#L17 магическое число 10 в этом выражении является скрытой зависимостью от длины прогрессии, если вдруг она изменится, но не поменять это число, то код будет работать некорректно
+TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/games/brain-progression.js#L17 магическое число 10 в этом выражении является скрытой зависимостью от длины прогрессии, если вдруг она изменится, но не поменять это число, то код будет работать некорректно
 
-TODO: https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/helpers/pair.js#L3-L14 Попробуйте подключить библиотеку @hexlet/pairs. getX, getY - так правильно было бы именовать селекторы, которые получают координаты.
+TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/helpers/pair.js#L3-L14 Попробуйте подключить библиотеку @hexlet/pairs. getX, getY - так правильно было бы именовать селекторы, которые получают координаты.
 
-TODO: https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/helpers/pair.js#L16-L18 эти функции специфичны для конкретных игр и не являются общими переиспользуемыми, перенесите их в модули соответствующих игр
+TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/helpers/pair.js#L16-L18 эти функции специфичны для конкретных игр и не являются общими переиспользуемыми, перенесите их в модули соответствующих игр
 */

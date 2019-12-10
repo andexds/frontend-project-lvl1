@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  makeRandomPair, getX, getY,
+  makeRandomPair, getFirstNumber, getSecondNumber, toString,
 } from '../helpers/pair';
 import getRandomNumber from '../helpers/random';
 import startGame from '..';
@@ -11,8 +11,8 @@ const showWelcomeMessage = () => {
 };
 
 const getNOD = (pair) => {
-  let x = getX(pair);
-  let y = getY(pair);
+  let x = getFirstNumber(pair);
+  let y = getSecondNumber(pair);
 
   while (x !== 0 && y !== 0) {
     if (x > y) {
@@ -29,7 +29,7 @@ const gameBrainGcd = () => {
   const randomPair = makeRandomPair(getRandomNumber(1, 100), getRandomNumber(1, 100));
   const correctAnswer = getNOD(randomPair);
 
-  console.log(`Question: ${getX(randomPair)} ${getY(randomPair)}`);
+  console.log(`Question: ${toString(randomPair)}`);
   const answer = readlineSync.question('Your answer: ');
 
   if (answer === correctAnswer) {

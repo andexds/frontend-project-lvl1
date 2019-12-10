@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
-import {
-  makeRandomPair, getX, getY, sum, mult, minus,
-} from '../helpers/pair';
+import { makeRandomPair, getFirstNumber, getSecondNumber } from '../helpers/pair';
 import getRandomNumber from '../helpers/random';
 import startGame from '..';
 
@@ -9,6 +7,10 @@ const showWelcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
   console.log('What is the result of the expression?');
 };
+
+const sum = (pair) => String(getFirstNumber(pair) + getSecondNumber(pair));
+const mult = (pair) => String(getFirstNumber(pair) * getSecondNumber(pair));
+const minus = (pair) => String(getFirstNumber(pair) - getSecondNumber(pair));
 
 const getAnswer = (pair, sing) => {
   switch (sing) {
@@ -28,7 +30,7 @@ const gameBrainCalc = () => {
   const randomSing = ['+', '-', '*'][getRandomNumber(0, 2)];
   const correctAnswer = getAnswer(randomPair, randomSing);
 
-  console.log(`Question: ${getX(randomPair)} ${randomSing} ${getY(randomPair)}`);
+  console.log(`Question: ${getFirstNumber(randomPair)} ${randomSing} ${getSecondNumber(randomPair)}`);
 
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {

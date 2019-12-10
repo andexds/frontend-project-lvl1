@@ -1,22 +1,12 @@
+import { cons, car, cdr } from '@hexlet/pairs';
 import getRandomNumber from './random';
 
-const makeRandomPair = (x = getRandomNumber(0, 10), y = getRandomNumber(0, 10)) => (selector) => {
-  switch (selector) {
-    case 'first':
-      return x;
-    case 'second':
-      return y;
-    default: return false;
-  }
-};
+const makeRandomPair = () => cons(getRandomNumber(0, 10), getRandomNumber(0, 10));
 
-const getX = (pair) => pair('first');
-const getY = (pair) => pair('second');
-
-const sum = (pair) => String(getX(pair) + getY(pair));
-const mult = (pair) => String(getX(pair) * getY(pair));
-const minus = (pair) => String(getX(pair) - getY(pair));
+const getFirstNumber = (pair) => car(pair);
+const getSecondNumber = (pair) => cdr(pair);
+const toString = (pair) => `${getFirstNumber(pair)} ${getSecondNumber(pair)}`;
 
 export {
-  makeRandomPair, getX, getY, sum, mult, minus,
+  makeRandomPair, getFirstNumber, getSecondNumber, toString,
 };
