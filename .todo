@@ -1,4 +1,4 @@
-/* TODO: https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/games/brain-calc.js#L9
+/* TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/games/brain-calc.js#L9
 Игровой процесс (приветствие, интерактивное взаимодействие с пользователем, проигрывание раундов, вывод финальных сообщений) - хона ответственности движка. Игра должна поставлять только данные.
 
 TODO (done): https://github.com/andexds/frontend-project-lvl1/blob/96fb86f71fbfba9eb06b8675377a7b1425ee2b15/src/helpers/random.js#L1 Доработайте генератор, чтобы он возвращал значение из диапазона.
