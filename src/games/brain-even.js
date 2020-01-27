@@ -5,7 +5,6 @@ const isEven = (number) => number % 2 === 0;
 
 const gemaBrainEven = () => {
   const currentNumber = getRandomNumber(0, 100);
-  console.log(`Question: ${currentNumber}`);
   const answer = isEven(currentNumber) ? 'yes' : 'no';
 
   return {
