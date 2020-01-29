@@ -3,18 +3,14 @@ import startGame from '..';
 
 const isEven = (number) => number % 2 === 0;
 
-const gemaBrainEven = () => {
-  const currentNumber = getRandomNumber(0, 100);
-  const answer = isEven(currentNumber) ? 'yes' : 'no';
+const getBrainEvenRound = () => {
+  const question = getRandomNumber(0, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
 
   return {
-    question: currentNumber,
+    question,
     answer,
   };
 };
 
-export default () => startGame({
-  gameName: 'Brain Even Game',
-  regulations: 'Answer "yes" if the number is even, otherwise answer "no".',
-  round: gemaBrainEven,
-});
+export default () => startGame('Brain Even Game', 'Answer "yes" if the number is even, otherwise answer "no".', getBrainEvenRound);

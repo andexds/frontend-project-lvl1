@@ -10,7 +10,7 @@ const isPrime = (n) => {
   return true;
 };
 
-const gameBrainPrime = () => {
+const getBrainPrimeRound = () => {
   const number = getRandomNumber(2, 4000);
   const answer = isPrime(number) ? 'yes' : 'no';
 
@@ -20,8 +20,4 @@ const gameBrainPrime = () => {
   };
 };
 
-export default () => startGame({
-  gameName: 'Brain Prime Game',
-  regulations: 'Answer "yes" if given number is prime. Otherwise answer "no".',
-  round: gameBrainPrime,
-});
+export default () => startGame('Brain Prime Game', 'Answer "yes" if given number is prime. Otherwise answer "no".', getBrainPrimeRound);

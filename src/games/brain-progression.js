@@ -1,7 +1,7 @@
 import getRandomNumber from '../helpers/random';
 import startGame from '..';
 
-const gameBrainProgression = () => {
+const getBrainProgressionRound = () => {
   const countOfNumbersInProgression = 10;
   const start = getRandomNumber(0, 10);
   const step = getRandomNumber(1, 10);
@@ -11,9 +11,9 @@ const gameBrainProgression = () => {
 
   for (let i = 0; i < countOfNumbersInProgression; i += 1) {
     if (i !== positionOfEmpty) {
-      progression += ` ${start + step * i} `;
+      progression = `${progression} ${start + step * i} `;
     } else {
-      progression += ' ... ';
+      progression = `${progression} ... `;
     }
   }
 
@@ -23,8 +23,4 @@ const gameBrainProgression = () => {
   };
 };
 
-export default () => startGame({
-  gameName: 'Brain Progression Game',
-  regulations: 'What number is missing in the progression?',
-  round: gameBrainProgression,
-});
+export default () => startGame('Brain Progression Game', 'What number is missing in the progression?', getBrainProgressionRound);

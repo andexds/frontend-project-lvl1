@@ -1,36 +1,33 @@
-import { makeRandomPair, getFirstNumber, getSecondNumber } from '../helpers/pair';
 import getRandomNumber from '../helpers/random';
 import startGame from '..';
 
-const sum = (pair) => String(getFirstNumber(pair) + getSecondNumber(pair));
-const mult = (pair) => String(getFirstNumber(pair) * getSecondNumber(pair));
-const minus = (pair) => String(getFirstNumber(pair) - getSecondNumber(pair));
+const sum = (a, b) => a + b;
+const mult = (a, b) => a * b;
+const minus = (a, b) => a - b;
 
-const getAnswer = (pair, sing) => {
+const getAnswer = (a, b, sing) => {
   switch (sing) {
     case '+':
-      return sum(pair);
+      return sum(a, b);
     case '-':
-      return minus(pair);
+      return minus(a, b);
     case '*':
-      return mult(pair);
+      return mult(a, b);
     default: return false;
   }
 };
 
-const gameBrainCalc = () => {
-  const randomPair = makeRandomPair();
-  const randomSing = ['+', '-', '*'][getRandomNumber(0, 2)];
-  const answer = getAnswer(randomPair, randomSing);
+const getBrainCalcRound = () => {
+  const sings = ['+', '-', '*'];
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
+  const randomSing = sings[getRandomNumber(0, sings.length - 1)];
+  const answer = String(getAnswer(firstNumber, secondNumber, randomSing));
 
   return {
-    question: `${getFirstNumber(randomPair)} ${randomSing} ${getSecondNumber(randomPair)}`,
+    question: `${firstNumber} ${randomSing} ${secondNumber}`,
     answer,
   };
 };
 
-export default () => startGame({
-  gameName: 'Brain Calc Game',
-  regulations: 'What is the result of the expression?',
-  round: gameBrainCalc,
-});
+export default () => startGame('Brain Calc Game', 'What is the result of the expression?', getBrainCalcRound);

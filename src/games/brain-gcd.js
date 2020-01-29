@@ -1,12 +1,9 @@
-import {
-  makeRandomPair, getFirstNumber, getSecondNumber, toString,
-} from '../helpers/pair';
 import getRandomNumber from '../helpers/random';
 import startGame from '..';
 
-const getNOD = (pair) => {
-  let x = getFirstNumber(pair);
-  let y = getSecondNumber(pair);
+const getGCD = (firstNumber, secondNumber) => {
+  let x = firstNumber;
+  let y = secondNumber;
 
   while (x !== 0 && y !== 0) {
     if (x > y) {
@@ -19,18 +16,15 @@ const getNOD = (pair) => {
   return String(x + y);
 };
 
-const gameBrainGcd = () => {
-  const randomPair = makeRandomPair(getRandomNumber(1, 100), getRandomNumber(1, 100));
-  const answer = getNOD(randomPair);
+const getBrainGcdRound = () => {
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const answer = getGCD(firstNumber, secondNumber);
 
   return {
-    question: toString(randomPair),
+    question: `${firstNumber} + ${secondNumber}`,
     answer,
   };
 };
 
-export default () => startGame({
-  gameName: 'Brain GCD Game',
-  regulations: 'Find the greatest common divisor of given numbers.',
-  round: gameBrainGcd,
-});
+export default () => startGame('Brain GCD Game', 'Find the greatest common divisor of given numbers.', getBrainGcdRound);
